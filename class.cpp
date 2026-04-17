@@ -76,11 +76,28 @@ using namespace std;
 
 // } 
 
+// class demo{
+// public:
+//     int a;
+//     demo(int a){
+//         this->a=a;
+//     }
+//     demo operator+(demo yy){ //doesnt necessarily have to be yy match cuz it's pass by value
+//         demo cc(0);  //Assigned "0" so that it doesnt show garbage values
+//         cc.a=a+yy.a;
+//         return cc;
+//     }
+// };
+
+// int main(void){
+//     demo xx(2);
+//     demo yy(2);
+//     demo cc = xx + yy;
+//     cout<<cc.a;
 
 class demo{
 public:
     int a;
-    demo()=default;
     demo(int a){
         this->a=a;
     }
@@ -92,8 +109,7 @@ public:
 };
 
 int main(void){
-    demo xx(2);
-    demo yy(2);
+    demo xx(2), yy(2);
     demo cc = xx + yy;
     cout<<cc.a;
 }
