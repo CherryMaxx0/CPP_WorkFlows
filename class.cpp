@@ -98,11 +98,12 @@ using namespace std;
 class demo{
 public:
     int a;
+    demo()=default;
     demo(int a){
         this->a=a;
     }
     demo operator+(demo yy){
-        demo cc(0);
+        demo cc;
         cc.a=a+yy.a;
         return cc;
     }
@@ -110,6 +111,6 @@ public:
 
 int main(void){
     demo xx(2), yy(2);
-    demo cc = xx + yy;
+    demo cc = xx +yy;
     cout<<cc.a;
 }
